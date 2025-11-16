@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navLinks } from "../data";
-import { FiMenu, FiX } from "react-icons/fi";   // install react-icons if not installed
+import { FiMenu, FiX } from "react-icons/fi";   
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ function Navbar() {
           ))}
         </ul>
 
-        {/* Hamburger Button (Mobile only) */}
+        {/* Hamburger Button*/}
         <button
           className="md:hidden text-3xl"
           onClick={() => setOpen(!open)}
@@ -46,7 +46,7 @@ function Navbar() {
           <a
             key={item.id}
             href={item.link}
-            onClick={() => setOpen(false)} // close menu when clicking link
+            onClick={() => setOpen(false)} 
             className="hover:text-blue-400 duration-300"
           >
             {item.title}

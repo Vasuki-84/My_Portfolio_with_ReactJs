@@ -68,16 +68,11 @@ function HeroSection() {
           >
             <FaLinkedin />
           </a>
-          {/* <a
-            href="https://instagram.com"
-            className="hover:text-blue-400 transition duration-300"
-          >
-            <FaInstagram />
-          </a> */}
+         
         </div>
       </div>
 
-      {/* Right Side - Floating Profile Picture */}
+      {/* Right Side - */}
       <div className="relative">
         <img
           src={myImage}
