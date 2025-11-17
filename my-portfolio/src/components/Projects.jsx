@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiExpress, SiNodedotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiNodedotjs,
+} from "react-icons/si";
 import { IoClose } from "react-icons/io5";
+import recipeImg from "../assets/recipe.jpg";
+import ecommerceImg from "../assets/ecommerce.jpg";
+import quizImg from "../assets/quiz.jpg";
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -13,10 +22,11 @@ const Projects = () => {
         "A smart app to find recipes, save favorites, and organize ingredients.",
       longDescription:
         "This application has a modern UI with recipe search, filtering, bookmarking, and ingredient management. Built using React and Tailwind CSS.",
-      image: "/projects/recipe.png",
+      image: recipeImg,
       tech: [<FaReact />, <SiTailwindcss />, <FaJs />],
       live: "#",
-      github: "https://github.com/Vasuki-84/Recipe-Finder-and-Organizer-App.git",
+      github:
+        "https://github.com/Vasuki-84/Recipe-Finder-and-Organizer-App.git",
     },
 
     {
@@ -25,22 +35,21 @@ const Projects = () => {
         "A responsive online shopping UI with cart system and clean UI.",
       longDescription:
         "Users can browse products, view details, add to cart, and navigate smoothly. Built using HTML, CSS, and JavaScript.",
-      image: "/projects/ecommerce.png",
+      image: ecommerceImg,
       tech: [<FaHtml5 />, <FaCss3Alt />, <FaJs />],
       live: "#",
       github: "https://github.com/Vasuki-84/e-Commerce_Website.git",
     },
 
     {
-      title: "Weather Application",
-      description:
-        "A real-time weather tracking app using OpenWeather API.",
+      title: "Quiz Application",
+      description: "An interactive quiz app with score tracking and modern UI.",
       longDescription:
-        "Shows temperature, humidity, wind speed, and weather conditions in real-time with a neat UI.",
-      image: "/projects/weather.png",
-      tech: [<FaHtml5 />, <FaCss3Alt />, <FaJs />],
+        "This quiz application allows users to answer multiple MCQ questions, shows results, tracks score, and provides smooth UI transitions. Built using HTML, CSS, and JavaScript.",
+      image: quizImg,
+      tech: [<FaHtml5 />, <FaCss3Alt />, <FaJs />, <FaReact />],
       live: "#",
-      github: "https://github.com/Vasuki-84/weather_Application.git",
+      github: "https://github.com/Vasuki-84/React-Quiz-App.git",
     },
   ];
 
@@ -51,7 +60,7 @@ const Projects = () => {
       </h2>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-13">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -98,11 +107,9 @@ const Projects = () => {
         ))}
       </div>
 
-     
       {selectedProject && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center p-4 z-50">
           <div className="bg-white rounded-2xl shadow-2xl p-6 max-w-lg w-full relative animate-fadeIn">
-            
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-2xl hover:text-red-600"
@@ -118,7 +125,9 @@ const Projects = () => {
             />
 
             <h2 className="text-3xl font-bold mb-2">{selectedProject.title}</h2>
-            <p className="text-gray-700 mb-4">{selectedProject.longDescription}</p>
+            <p className="text-gray-700 mb-4">
+              {selectedProject.longDescription}
+            </p>
 
             <div className="flex gap-3 text-2xl mb-6">
               {selectedProject.tech.map((icon, i) => (
