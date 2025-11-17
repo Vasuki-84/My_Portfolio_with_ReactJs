@@ -1,2 +1,23 @@
 
 @import "tailwindcss";
+
+/*  Fluid Animated Border */
+.fluid-border {
+  border-radius: 12px;
+  padding: 6px;
+  background: linear-gradient(120deg, #2856f0, #4d91ff, #133eec, #1b70f0);
+  background-size: 300% 300%;
+  animation: fluidMove 6s ease-in-out infinite;
+}
+
+@keyframes fluidMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

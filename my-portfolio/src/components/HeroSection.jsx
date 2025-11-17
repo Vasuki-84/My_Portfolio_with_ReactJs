@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import myImage from "../assets/myImage.jpg";
-
 
 function HeroSection() {
   return (
@@ -68,7 +68,12 @@ function HeroSection() {
           >
             <FaLinkedin />
           </a>
-         
+          <a
+            href="mailto:iamvasukithangaraj@example.com"
+            className="hover:text-blue-400 transition duration-300"
+          >
+            <MdEmail />
+          </a>
         </div>
       </div>
 
