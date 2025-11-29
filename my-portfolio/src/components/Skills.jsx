@@ -16,6 +16,10 @@ import {
   SiPostman,
   SiNpm,
 } from "react-icons/si";
+import { FaCogs } from "react-icons/fa";               
+import { MdSettingsSuggest } from "react-icons/md";  
+import { AiOutlineCluster } from "react-icons/ai";    
+import { RiShieldCheckFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 
 const Skills = () => {
@@ -39,9 +43,15 @@ const Skills = () => {
           <SkillItem icon={<SiBootstrap />} label="Bootstrap" />
         </SkillCard>
 
-        <SkillCard title="Backend" >
+        <SkillCard title="Backend">
           <SkillItem icon={<FaNodeJs />} label="Node.js" />
           <SkillItem icon={<SiExpress />} label="Express.js" />
+
+          {/* Additional Backend Concepts */}
+          <SkillItem icon={<FaCogs />} label="RESTful API Creation" />
+          <SkillItem icon={<MdSettingsSuggest />} label="Middleware" />
+          <SkillItem icon={<AiOutlineCluster />} label="Routing" />
+          <SkillItem icon={<RiShieldCheckFill />} label="Auth & JWT" />
         </SkillCard>
 
         <SkillCard title="Database">
@@ -59,8 +69,7 @@ const Skills = () => {
   );
 };
 
-
-const SkillCard = ({ title , children }) => (
+const SkillCard = ({ title, children }) => (
   <div
     className="
       backdrop-blur-xl bg-white/5 border border-white/10
@@ -77,7 +86,6 @@ const SkillCard = ({ title , children }) => (
   </div>
 );
 
-
 const SkillItem = ({ icon, label }) => (
   <div
     className="
@@ -91,8 +99,6 @@ const SkillItem = ({ icon, label }) => (
       hover:scale-[1.01]
     "
   >
-  
-
     <span className="text-2xl">{icon}</span>
     <p className="text-lg">{label}</p>
   </div>
