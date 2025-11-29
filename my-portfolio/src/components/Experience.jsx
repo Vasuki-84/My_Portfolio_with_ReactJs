@@ -55,11 +55,12 @@ const Experience = () => {
         {/* SKILLS   */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
+            "Understanding of Web Applications",
             "API Handling Basics",
             "Git & GitHub",
-            "Clean Code Practices",
+            "SDLC Understanding",
             "Error handling",
-            "Fast Learning Ability",
+            "HTML, CSS, JavaScript (Basics)",
           ].map((skill, index) => (
             <div
               key={index}
