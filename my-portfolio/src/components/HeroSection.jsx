@@ -25,7 +25,6 @@ function HeroSection() {
               "React JS Developer",
               "Back-End Developer",
               "MERN Stack Developer",
-              
             ]}
             typeSpeed={50}
             backSpeed={40}
@@ -53,9 +52,9 @@ function HeroSection() {
           >
             Contact Me
           </a>
-             {/* Download CV */}
+          {/* Download CV */}
           <a
-            href="/Vasuki-CV.pdf"
+            href="/Vasuki_T_FullStackDeveloper.pdf" target="_blank"
             download
             className="border border-green-400 text-green-300 hover:bg-green-400 hover:text-black px-6 py-3 rounded-lg font-semibold transition duration-300"
           >

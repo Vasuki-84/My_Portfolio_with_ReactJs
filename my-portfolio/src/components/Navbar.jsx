@@ -10,7 +10,7 @@ function Navbar() {
       <div className="flex justify-between items-center max-w-6xl mx-auto text-black">
 
         {/* Logo */}
-        <h1 className="text-2xl font-bold ">VASUKI</h1>
+        <h1 className="text-2xl font-bold ">VASUKI T</h1>
 
         {/* Desktop Navbar */}
         <ul className="hidden md:flex gap-8">

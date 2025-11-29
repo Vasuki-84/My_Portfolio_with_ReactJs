@@ -24,7 +24,7 @@ const Projects = () => {
         "This application has a modern UI with recipe search, filtering, bookmarking, and ingredient management. Built using React and Tailwind CSS.",
       image: recipeImg,
       tech: [<FaReact />, <SiTailwindcss />, <FaJs />],
-      live: "#",
+      live: "https://frontendrecipeapp.netlify.app/",
       github:
         "https://github.com/Vasuki-84/Recipe-Finder-and-Organizer-App.git",
     },
@@ -37,7 +37,7 @@ const Projects = () => {
         "Users can browse products, view details, add to cart, and navigate smoothly. Built using HTML, CSS, and JavaScript.",
       image: ecommerceImg,
       tech: [<FaHtml5 />, <FaCss3Alt />, <FaJs />],
-      live: "#",
+      live: "https://vasuki-84.github.io/e-Commerce_Website/",
       github: "https://github.com/Vasuki-84/e-Commerce_Website.git",
     },
 
@@ -48,13 +48,13 @@ const Projects = () => {
         "This quiz application allows users to answer multiple MCQ questions, shows results, tracks score, and provides smooth UI transitions. Built using HTML, CSS, and JavaScript.",
       image: quizImg,
       tech: [<FaHtml5 />, <FaCss3Alt />, <FaJs />, <FaReact />],
-      live: "#",
+      live: "https://vasuki-84.github.io/Quiz_Application/",
       github: "https://github.com/Vasuki-84/React-Quiz-App.git",
     },
   ];
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-white text-black">
+    <section   id="projects" className="py-20 px-6 md:px-16 bg-white text-black">
       <h2 className="text-4xl font-bold text-center mb-12">
         My <span className="text-blue-600">Projects</span>
       </h2>
