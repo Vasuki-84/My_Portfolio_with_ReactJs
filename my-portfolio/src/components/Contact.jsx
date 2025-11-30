@@ -149,7 +149,7 @@ export default function TestEmail() {
   const send = async (e) => {
     e.preventDefault();
     try {
-      const res = await emailjs.sendForm("service_3h629ww","template_lpdwgfx",form.current,"T-KpYOURREALKEY");
+      const res = await emailjs.sendForm("service_3h629ww","template_lpdwgfx",form.current,"faZ8wyYSjbjGdk0mNxWUr");
       console.log("Success:", res);
       alert("sent");
     } catch (err) {
