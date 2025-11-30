@@ -1,7 +1,37 @@
-import React from "react";
+
+
+import React, { useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatusMessage("Sending...");
+
+    emailjs.sendForm(
+      "service_3h629ww",       // your service ID
+      "template_lpdwgfx",      // your template ID
+      form.current,
+      "T-Kp1234567890abcdef"
+
+    ).then(
+      (result) => {
+        setStatusMessage("✅ Message sent successfully!");
+        e.target.reset();
+        setTimeout(() => setStatusMessage(""), 5000); // hide message after 5s
+      },
+      (error) => {
+        setStatusMessage("❌ Oops! Something went wrong.");
+        console.error("EmailJS error:", error.text);
+        setTimeout(() => setStatusMessage(""), 5000); // hide message after 5s
+      }
+    );
+  };
+
   return (
     <section
       id="contact"
@@ -12,7 +42,6 @@ function Contact() {
       </h2>
 
       <div className="max-w-3xl mx-auto">
-        {/* Glassmorphism Card */}
         <div className="
           bg-white/5 
           backdrop-blur-xl 
@@ -23,47 +52,57 @@ function Contact() {
           transition 
           hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]
         ">
-          
-          <form className="space-y-5">
-            {/* Name */}
+          {/* Contact Form */}
+          <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <input
               type="text"
+              name="from_name"        // match EmailJS template variable
               placeholder="Your Name"
               className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white focus:border-blue-400 outline-none"
+              required
             />
 
-            {/* Email */}
             <input
               type="email"
+              name="from_email"       // match EmailJS template variable
               placeholder="Your Email"
               className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white focus:border-blue-400 outline-none"
+              required
             />
 
-            {/* Message */}
             <textarea
+              name="message"          // already matches template
               rows="4"
               placeholder="Your Message"
               className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white focus:border-blue-400 outline-none"
+              required
             ></textarea>
 
-            {/* Submit Button */}
-            <button className="
-              w-full 
-              py-3 
-              rounded-lg 
-              bg-blue-500 
-              hover:bg-blue-600 
-              font-semibold 
-              transition
-            ">
+            <button
+              type="submit"
+              className="
+                w-full 
+                py-3 
+                rounded-lg 
+                bg-blue-500 
+                hover:bg-blue-600 
+                font-semibold 
+                transition
+              "
+            >
               Send Message
             </button>
           </form>
 
+          {/* Status message */}
+          {statusMessage && (
+            <p className="mt-4 text-center text-white">{statusMessage}</p>
+          )}
+
           {/* Download CV Button */}
           <div className="text-center mt-8">
             <a
-              href="/Vasuki-CV.pdf"
+              href="/Vasuki_T_FullStackDeveloper.pdf"
               download
               className="
                 inline-block 
@@ -101,3 +140,4 @@ function Contact() {
 }
 
 export default Contact;
+
