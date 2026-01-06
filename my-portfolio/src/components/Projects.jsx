@@ -7,26 +7,33 @@ import {
   SiNodedotjs,
 } from "react-icons/si";
 import { IoClose } from "react-icons/io5";
-import recipeImg from "../assets/recipe.jpg";
+import crmImg from "../assets/crmImg.jpeg";
 import ecommerceImg from "../assets/ecommerce.jpg";
 import quizImg from "../assets/quiz.jpg";
 
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [openCodeIndex, setOpenCodeIndex] = useState(null);
 
   const projects = [
     {
-      title: "Recipe Finder & Organizer App",
+      title: "CRM System Application",
       description:
-        "A smart app to find recipes, save favorites, and organize ingredients.",
+        "A full-stack CRM application to manage customers, leads, and business workflows.",
       longDescription:
-        "This application has a modern UI with recipe search, filtering, bookmarking, and ingredient management. Built using React and Tailwind CSS.",
-      image: recipeImg,
-      tech: [<FaReact />, <SiTailwindcss />, <FaJs />],
-      live: "https://frontendrecipeapp.netlify.app/",
-      github:
-        "https://github.com/Vasuki-84/Recipe-Finder-and-Organizer-App.git",
+        "This CRM system provides a modern UI with customer management, lead tracking, and dashboard features. Built using React for the frontend, Node.js & Express for the backend, and styled with Tailwind CSS.",
+      image: crmImg,
+      tech: [
+        <FaReact />,
+        <FaJs />,
+        <SiNodedotjs />,
+        <SiMongodb />,
+        <SiTailwindcss />,
+        <SiExpress />,
+      ],
+      live: "https://crmapplication.netlify.app/",
+      githubFrontend: "https://github.com/Vasuki-84/CRM_System_Frontend.git",
+      githubBackend: "https://github.com/Vasuki-84/CRM_System_backend.git",
     },
 
     {
@@ -54,7 +61,7 @@ const Projects = () => {
   ];
 
   return (
-    <section   id="projects" className="py-20 px-6 md:px-16 bg-white text-black">
+    <section id="projects" className="py-20 px-6 md:px-16 bg-white text-black">
       <h2 className="text-4xl font-bold text-center mb-12">
         My <span className="text-blue-600">Projects</span>
       </h2>
@@ -94,13 +101,65 @@ const Projects = () => {
                   View Details
                 </button>
 
-                <a
+                {/* <a
                   href={project.github}
                   className="flex items-center gap-2 px-4 py-2 border border-blue-600 rounded-lg hover:bg-blue-300 transition"
                   target="_blank"
                 >
                   <FaGithub /> Code
-                </a>
+                </a> */}
+
+                <div className="relative">
+                  {/* CRM project (Frontend + Backend) */}
+                  {project.githubFrontend || project.githubBackend ? (
+                    <>
+                      <button
+                        onClick={() =>
+                          setOpenCodeIndex(
+                            openCodeIndex === index ? null : index
+                          )
+                        }
+                        className="flex items-center gap-2 px-4 py-2 border border-blue-600 rounded-lg hover:bg-blue-300 transition"
+                      >
+                        <FaGithub /> Code
+                      </button>
+
+                      {/* Dropdown buttons */}
+                      {openCodeIndex === index && (
+                        <div className="absolute right-0 bottom-full mb-2 bg-white border rounded-xl shadow-lg p-3 flex flex-col gap-2 z-20">
+                          {project.githubFrontend && (
+                            <a
+                              href={project.githubFrontend}
+                              target="_blank"
+                              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-blue-100 transition"
+                            >
+                              <FaGithub /> Frontend
+                            </a>
+                          )}
+
+                          {project.githubBackend && (
+                            <a
+                              href={project.githubBackend}
+                              target="_blank"
+                              className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-green-100 transition"
+                            >
+                              <FaGithub /> Backend
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    /* Normal projects */
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="flex items-center gap-2 px-4 py-2 border border-blue-600 rounded-lg hover:bg-blue-300 transition"
+                    >
+                      <FaGithub /> Code
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -148,14 +207,37 @@ const Projects = () => {
               >
                 Live Demo
               </a>
+              {selectedProject.github && (
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+                >
+                  <FaGithub /> Code
+                </a>
+              )}
 
-              <a
-                href={selectedProject.github}
-                target="_blank"
-                className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
-              >
-                <FaGithub /> Code
-              </a>
+              {/* CRM Frontend */}
+              {selectedProject.githubFrontend && (
+                <a
+                  href={selectedProject.githubFrontend}
+                  target="_blank"
+                  className="flex items-center gap-2 px-3 py-2 border border-blue-600 rounded-lg hover:bg-blue-300 transition"
+                >
+                  <FaGithub /> Frontend
+                </a>
+              )}
+
+              {/* CRM Backend */}
+              {selectedProject.githubBackend && (
+                <a
+                  href={selectedProject.githubBackend}
+                  target="_blank"
+                  className="flex items-center gap-2 px-3 py-2 border border-green-600 rounded-lg hover:bg-green-300 transition"
+                >
+                  <FaGithub /> Backend
+                </a>
+              )}
             </div>
           </div>
         </div>
