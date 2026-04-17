@@ -15,6 +15,7 @@ import {
   SiMongodb,
   SiPostman,
   SiNpm,
+  SiNextdotjs 
 } from "react-icons/si";
 import { FaCogs } from "react-icons/fa";               
 import { MdSettingsSuggest } from "react-icons/md";  
@@ -38,6 +39,7 @@ const Skills = () => {
           <SkillItem icon={<FaCss3Alt />} label="CSS" />
           <SkillItem icon={<FaJs />} label="JavaScript" />
           <SkillItem icon={<FaReact />} label="React.js" />
+          <SkillItem icon={<SiNextdotjs />} label="Next.js" />
           <SkillItem icon={<SiRedux />} label="Redux / Context API" />
           <SkillItem icon={<SiTailwindcss />} label="Tailwind CSS" />
           <SkillItem icon={<SiBootstrap />} label="Bootstrap" />
