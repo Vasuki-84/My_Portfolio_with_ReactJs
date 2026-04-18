@@ -105,12 +105,13 @@
   import { FaGithub, FaLinkedin } from "react-icons/fa"; 
   import { MdEmail } from "react-icons/md";
  import myImage from "../assets/aboutIamge.jpg";
-  function HeroSection() { return ( <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden bg-[#111827] text-white" > {/* Background Gradient Orbs for Professional Depth */} 
+  function HeroSection() { return (
+     <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden bg-[#111827] text-white" > {/* Background Gradient Orbs for Professional Depth */} 
   <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]" />
-   <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 rounded-full blur-[120px]" />
+   <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]" />
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 z-10"> {/* Profile Image - Left Side on Desktop with Colorful Hover Effect */} 
       <div className="relative group md:w-1/2 flex justify-center md:justify-end"> {/* Animated Colorful Glow on Hover */} 
-      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-500 group-hover:duration-200 animate-pulse"></div> 
+      <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-blue-500 to-indigo-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-500 group-hover:duration-200 animate-pulse"></div> 
       <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl transition-all duration-500 group-hover:border-blue-400/50">
        <img src={myImage} alt="Vasuki - Profile" className="w-full h-full object-fit transform transition-all duration-500 group-hover:scale-110 group-hover:saturate-150" /> 
        </div>
