@@ -54,7 +54,7 @@ function HeroSection() {
           </a>
           {/* Download CV */}
           <a
-            href="/Vasuki_T_FullStackDeveloper.pdf" target="_blank"
+            href="https://drive.google.com/file/d/1ffX_p9p42hLdynRQoZLhDxRcoqrs-vZt/view?usp=sharing" target="_blank"
             download
             className="border border-green-400 text-green-300 hover:bg-green-400 hover:text-black px-6 py-3 rounded-lg font-semibold transition duration-300"
           >

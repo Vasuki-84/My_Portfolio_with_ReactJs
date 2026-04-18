@@ -102,7 +102,7 @@ function Contact() {
           {/* Download CV Button */}
           <div className="text-center mt-8">
             <a
-              href="/Vasuki_T_FullStackDeveloper.pdf"
+              href="https://drive.google.com/file/d/1ffX_p9p42hLdynRQoZLhDxRcoqrs-vZt/view?usp=drive_link"
               download
               className="
                 inline-block 
