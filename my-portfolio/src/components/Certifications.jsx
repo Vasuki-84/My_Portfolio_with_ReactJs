@@ -5,7 +5,7 @@ function Certifications() {
     {
       title: "Full Stack Development (MERN) Certification",
       provider: "Entri Elevate",
-      year: "2025",
+      year: "2026",
       details: [
         "Built responsive and user-friendly websites using HTML, CSS, JavaScript, React, and Bootstrap.",
         "Developed back-end systems with Node.js, Express.js, MongoDB, and implemented JWT-based authentication for secure user management.",
@@ -15,13 +15,13 @@ function Certifications() {
     {
       title: "Full Stack Web Development (MERN)",
       provider: "Illinois Tech, USA (Present)",
-      year: "2025",
+      year: "2026",
       details: [],
     },
     {
       title: "NSDC Certification",
       provider: "",
-      year: "",
+      year: "2026",
       details: [
         "Built responsive UI and user-friendly layouts.",
         "Worked with modern JavaScript and React fundamentals.",
