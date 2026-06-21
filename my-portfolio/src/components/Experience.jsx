@@ -3,44 +3,36 @@
 import ctsLogo from "../assets/cts.jpg";
 import tetroLogo from "../assets/tetro.jpeg";
 import entriLogo from "../assets/entri.png";
+import capmindsLogo from "../assets/capmindsLogo.jpg";
 
 const experiences = [
+  
   {
-    company: "Cognizant Technology Solutions (CTS)",
-    role: "Programmer Trainee",
-    duration: "Dec 2022 – May 2023",
-    logo: ctsLogo,
-    description:
-      "Worked on foundational programming, debugging, and technical tasks that strengthened analytical thinking, clean coding habits, and software development practices.",
-    skills: [
-      "Web Applications",
-      "API Handling Basics",
-      "Git & GitHub",
-      "SDLC",
-      "Error Handling",
-      "HTML, CSS, JS",
-    ],
-  },
-  // {
-  //   company: "Tetro Infotech Private Limited",
-  //   role: "Full Stack Developer Intern",
-  //   duration: "Mar 2026 – Present",
-  //   logo: tetroLogo,
-  //   description:
-  //     "Built responsive MERN stack applications and developed scalable backend APIs while collaborating on real-time full stack projects.",
-  //   skills: [
-  //     "React.js",
-  //     "Node.js",
-  //     "Express.js",
-  //     "MongoDB",
-  //     "REST APIs",
-  //     "JWT Authentication",
-  //   ],
-  // },
+  company: "CapMinds Technologies",
+  role: "Advanced Full Stack Developer Intern",
+  duration: "Apr 2026 - Present",
+  logo: capmindsLogo,
+  description:
+    "Developed and maintained healthcare-based web applications using React.js, Redux Toolkit, and modern frontend development practices while collaborating with team members in an Agile environment.",
+  skills: [
+    "React.js",
+    "Redux Toolkit",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "React Router",
+    "REST APIs",
+    "Custom Hooks",
+    "Git",
+    "GitHub",
+    "Bootstrap",
+    "Responsive Design",
+  ],
+},
   {
     company: "Entri Elevate",
     role: "Backend Developer Intern",
-    duration: "Mar 2026 – Apr 2026",
+    duration: "Mar 2026 - Apr 2026",
     logo: entriLogo,
     description:
       "Developed secure backend services with authentication, API testing, and database integration for production-ready applications.",
@@ -53,6 +45,22 @@ const experiences = [
       "Backend Dev",
     ],
   },
+  {
+    company: "Cognizant Technology Solutions (CTS)",
+    role: "Programmer Trainee",
+    duration: "Dec 2022 - May 2023",
+    logo: ctsLogo,
+    description:
+      "Worked on foundational programming, debugging, and technical tasks that strengthened analytical thinking, clean coding habits, and software development practices.",
+    skills: [
+      "Web Applications",
+      "API Handling Basics",
+      "Git & GitHub",
+      "SDLC",
+      "Error Handling",
+      "HTML, CSS, JS",
+    ],
+  }
 ];
 
 const styles = `
