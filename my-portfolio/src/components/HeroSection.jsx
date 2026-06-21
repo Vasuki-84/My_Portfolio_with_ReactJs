@@ -30,13 +30,13 @@ function HeroSection() {
         </div>
         {/* Content Section - Right Side on Desktop */}
         <div className="text-center md:text-left md:w-1/2 max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mb-4">
             {" "}
             Hi, I'm <span className="text-blue-400">Vasuki</span>{" "}
           </h1>
           {/* Typing Animation Area */}
           <div className="h-8 md:h-10 mb-6">
-            <h2 className="text-xl md:text-3xl font-medium text-gray-400">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-400">
               <ReactTyped
                 strings={[
                   "Front-End Developer",
@@ -50,24 +50,24 @@ function HeroSection() {
               />{" "}
             </h2>
           </div>{" "}
-          <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
             {" "}
             I build beautiful, modern, and responsive web applications using
             React, Tailwind CSS, JavaScript, and creative UI design
             principles.{" "}
           </p>
           {/* Primary Action Buttons */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-10">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4 mb-10">
             <a
               href="#projects"
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:-translate-y-1 active:scale-95"
+              className="px-5 py-2.5 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-base bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:-translate-y-1 active:scale-95"
             >
               {" "}
               View Projects{" "}
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl font-bold transition-all duration-300 backdrop-blur-sm hover:-translate-y-1 active:scale-95"
+              className="px-5 py-2.5 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-base bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl font-bold transition-all duration-300 backdrop-blur-sm hover:-translate-y-1 active:scale-95"
             >
               {" "}
               Contact Me{" "}
@@ -77,13 +77,13 @@ function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               download
-              className="px-8 py-4 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-xl font-bold transition-all duration-300 flex items-center gap-2 hover:-translate-y-1 active:scale-95"
+              className="px-5 py-2.5 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-base bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-xl font-bold transition-all duration-300 flex items-center gap-2 hover:-translate-y-1 active:scale-95"
             >
               {" "}
               Download CV{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-4 w-4 sm:h-5 sm:w-5"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
