@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiNodedotjs } from "react-icons/si";
+import { SiMongodb, SiExpress, SiNodedotjs,SiTailwindcss  } from "react-icons/si";
 import { IoClose } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 import movieImg from "../assets/movie.jpeg";
 import ecommerceImg from "../assets/ecommerce.jpg";
 import quizImg from "../assets/quiz.jpg";
+import roseEmbroideryImg from "../assets/roseEmbroideryImg.jpeg";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
@@ -484,6 +485,22 @@ const Projects = () => {
       live: "https://quizmastery-flame.vercel.app/",
       github: "https://github.com/Vasuki-84/QuizMaster-Backend.git",
     },
+    {
+  title: "Rose Embroidery Machines - Business Website",
+  description:
+    "A responsive business website for showcasing embroidery machines, services, and company information.",
+  longDescription:
+    "Developed a modern and responsive website for an embroidery machine sales company using HTML, CSS, Tailwind CSS, and JavaScript. The website highlights products, services, and business details while providing a seamless user experience across desktop and mobile devices.",
+  image: roseEmbroideryImg,
+  tech: [
+    { icon: <FaHtml5 />, label: "HTML5" },
+    { icon: <FaCss3Alt />, label: "CSS3" },
+    { icon: <SiTailwindcss />, label: "Tailwind CSS" },
+    { icon: <FaJs />, label: "JavaScript" },
+  ],
+  live: "https://vasuki-84.github.io/Rose_Embroidary_Project/index.html",
+  github: "https://github.com/Vasuki-84/Rose_Embroidary_Project",
+},
     {
       title: "Movie Review & Rating Platform",
       description:
