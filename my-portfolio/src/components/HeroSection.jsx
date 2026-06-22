@@ -39,10 +39,10 @@ function HeroSection() {
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-400">
               <ReactTyped
                 strings={[
-                  "Front-End Developer",
-                  "React JS Developer",
-                  "Back-End Developer",
                   "MERN Stack Developer",
+                  "React & PHP Full Stack Developer",
+                  "Back-End Developer",
+                  "Front-End Developer",
                 ]}
                 typeSpeed={50}
                 backSpeed={40}

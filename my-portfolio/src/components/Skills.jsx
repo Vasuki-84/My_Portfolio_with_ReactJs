@@ -345,12 +345,12 @@ const categories = [
       { icon: <FaJs />, label: "JavaScript" },
       { icon: <FaReact />, label: "React.js" },
       { icon: <SiNextdotjs />, label: "Next.js" },
-      { icon: <SiRedux />, name: "Redux Toolkit" },
+      { icon: <SiRedux />, label: "Redux Toolkit" },
       { icon: <SiTailwindcss />, label: "Tailwind CSS" },
       { icon: <SiBootstrap />, label: "Bootstrap" },
       // New Skills
-      { icon: <SiMysql />, name: "MySQL" },
-      { icon: <SiPhp />, name: "PHP" },
+      { icon: <SiMysql />, label: "MySQL" },
+      { icon: <SiPhp />, label: "PHP" },
     ],
   },
   {

@@ -1,6 +1,18 @@
 import React, { useState } from "react";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiNodedotjs,SiTailwindcss  } from "react-icons/si";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaGithub,
+  FaNodeJs,
+} from "react-icons/fa";
+import {
+  SiMongodb,
+  SiExpress,
+  SiNodedotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 import { IoClose } from "react-icons/io5";
 import { HiArrowUpRight } from "react-icons/hi2";
 
@@ -8,6 +20,7 @@ import movieImg from "../assets/movie.jpeg";
 import ecommerceImg from "../assets/ecommerce.jpg";
 import quizImg from "../assets/quiz.jpg";
 import roseEmbroideryImg from "../assets/roseEmbroideryImg.jpeg";
+import styleHubImg from "../assets/styleHubImg.jpeg";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
@@ -471,10 +484,11 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Quiz Master",
-      description: "An interactive quiz app with score tracking and modern UI.",
+      title: "Quiz Master - Online Quiz Assessment Platform",
+      description:
+        "Quiz Master is a MERN stack-based online quiz platform for testing knowledge through interactive quizzes.",
       longDescription:
-        "This quiz application allows users to answer multiple MCQ questions, shows results, tracks score, and provides smooth UI transitions.",
+        "Users can attempt quizzes, track scores, and view performance history in real time and Admins can manage quizzes, questions, categories, and monitor user activity through a dashboard.",
       image: quizImg,
       tech: [
         { icon: <FaHtml5 />, label: "HTML5" },
@@ -486,21 +500,38 @@ const Projects = () => {
       github: "https://github.com/Vasuki-84/QuizMaster-Backend.git",
     },
     {
-  title: "Rose Embroidery Machines - Business Website",
-  description:
-    "A responsive business website for showcasing embroidery machines, services, and company information.",
-  longDescription:
-    "Developed a modern and responsive website for an embroidery machine sales company using HTML, CSS, Tailwind CSS, and JavaScript. The website highlights products, services, and business details while providing a seamless user experience across desktop and mobile devices.",
-  image: roseEmbroideryImg,
-  tech: [
-    { icon: <FaHtml5 />, label: "HTML5" },
-    { icon: <FaCss3Alt />, label: "CSS3" },
-    { icon: <SiTailwindcss />, label: "Tailwind CSS" },
-    { icon: <FaJs />, label: "JavaScript" },
-  ],
-  live: "https://vasuki-84.github.io/Rose_Embroidary_Project/index.html",
-  github: "https://github.com/Vasuki-84/Rose_Embroidary_Project",
-},
+      title: "Rose Embroidery Machines - Business Website",
+      description:
+        "A responsive business website for showcasing embroidery machines, services, and company information.",
+      longDescription:
+        "Developed a modern and responsive website for an embroidery machine sales company using HTML, CSS, Tailwind CSS, and JavaScript. The website highlights products, services, and business details while providing a seamless user experience across desktop and mobile devices.",
+      image: roseEmbroideryImg,
+      tech: [
+        { icon: <FaHtml5 />, label: "HTML5" },
+        { icon: <FaCss3Alt />, label: "CSS3" },
+        { icon: <SiTailwindcss />, label: "Tailwind CSS" },
+        { icon: <FaJs />, label: "JavaScript" },
+      ],
+      live: "https://vasuki-84.github.io/Rose_Embroidary_Project/index.html",
+      github: "https://github.com/Vasuki-84/Rose_Embroidary_Project",
+    },
+    {
+      title: "StyleHub - Fashion E-Commerce Platform",
+      description:
+        "A full-stack fashion e-commerce platform with user authentication, product management, shopping cart, and order processing.",
+      longDescription:
+        "Developed a full-stack fashion e-commerce application using the MERN Stack (MongoDB, Express.js, React.js, and Node.js). The platform enables users to browse products, manage shopping carts, register and log in securely, and place orders through a responsive and intuitive interface. Built scalable REST APIs and integrated MongoDB for efficient data management.",
+      image: styleHubImg,
+      tech: [
+        { icon: <FaReact />, label: "React.js" },
+        { icon: <FaNodeJs />, label: "Node.js" },
+        { icon: <SiExpress />, label: "Express.js" },
+        { icon: <SiMongodb />, label: "MongoDB" },
+        { icon: <FaJs />, label: "JavaScript" },
+      ],
+      live: "https://style-hub-fashions.netlify.app/",
+      github: "https://github.com/Vasuki-84/Style_Hub_Store.git",
+    },
     {
       title: "Movie Review & Rating Platform",
       description:
@@ -519,9 +550,11 @@ const Projects = () => {
       backend: "https://github.com/Vasuki-84/Movies_Review_Platform_Backend",
     },
     {
-      title: "E-Commerce Website",
-      description: "A responsive online shopping UI with cart system and clean design.",
-      longDescription: "Built using HTML, CSS, and JavaScript.",
+      title: "AllBirds - Fashion & Lifestyle Store",
+      description:
+        "Developed a responsive e-commerce website using HTML, CSS, and JavaScript",
+      longDescription:
+        "Implemented product listings, category navigation, and shopping cart functionality. Designed a user-friendly interface inspired by modern online shopping platforms.",
       image: ecommerceImg,
       tech: [
         { icon: <FaHtml5 />, label: "HTML5" },
@@ -538,7 +571,9 @@ const Projects = () => {
       return (
         <div className="dropdown-wrapper">
           <button
-            onClick={() => setOpenDropdown(openDropdown === index ? null : index)}
+            onClick={() =>
+              setOpenDropdown(openDropdown === index ? null : index)
+            }
             className="btn-ghost"
           >
             <FaGithub /> Code
@@ -584,8 +619,10 @@ const Projects = () => {
   return (
     <>
       <style>{styles}</style>
-      <section id="projects" className="projects-section py-20 px-4 sm:px-8 md:px-16">
-
+      <section
+        id="projects"
+        className="projects-section py-20 px-4 sm:px-8 md:px-16"
+      >
         {/* Header */}
         <div className="max-w-5xl mx-auto mb-14">
           <p className="section-label">What I've built</p>
@@ -598,7 +635,6 @@ const Projects = () => {
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-
               {/* Image */}
               <div className="card-img-wrapper">
                 <img src={project.image} alt={project.title} />
